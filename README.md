@@ -27,7 +27,7 @@ Create a webapp that demonstrates the skills of a developer working on a React P
 	- Price
 	- Quantity Selector
 	- Add button
-  - Filtering?
+  - Filtering - MVP#2
 
 - Checkout page
   - Title
@@ -46,7 +46,6 @@ Create a webapp that demonstrates the skills of a developer working on a React P
 ### Atoms
 - Image
 - Button
-- Product List
 - Product
 - Text
 - Link
@@ -60,18 +59,42 @@ Create a webapp that demonstrates the skills of a developer working on a React P
 - Product List
 - Links
 - Product Table
-- Filter?
+- Filter  - MVP#2
 
 
-### TBD (as of 24.04.2020):
+### Epics: (to be written 24.04.2020)
 
-- Webpack/babel config
-- BD Structure
-- Task planning using planning poker
-- Technologies/plugins to use
-- Styling (SASS + Bootstrap)
-- Grid
-- Breakpoints (Desktop/Tablet/Mobile)
+- Header
+- Footer
+- Homepage -> Products
+- Products
+- Checkout
+- Confirmation
+  
+
+### Technologies/Plugins
+
+- ContextAPI
 - React Router
-- Unit tests
-- Deploy Heroku/IBM Cloud (every x days/hours)
+- Reactbootstrap / MaterializeCSS - TBD (24.04.2020)
+  - Grid to be used
+- FontAwesome (materiliaze
+- Components (Atoms/Molecules/Organisms)
+- Sass
+- BEM
+- Webpack + babel config: https://www.valentinog.com/blog/babel/ 
+- PropTypes
+- Storybook
+- Unit Tests (jest + react dom libray/enzyme TBD 24.04.2020)
+- Deploy pe Cloud Application Platform (Heroku/IBM Cloud)
+- BD structure (Node, Express, MongoDB, Mongoose): TBD
+```
+{
+	products {
+	
+	},
+	orders: {
+	
+	}
+}
+```
