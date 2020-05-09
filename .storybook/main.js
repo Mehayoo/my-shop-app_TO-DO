@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   stories: ["../src/**/*.stories.(js|mdx)"],
   addons: [
@@ -5,7 +7,7 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-viewport/register",
     "@storybook/addon-knobs/register",
-    "@storybook/addon-console",
+    //"@storybook/addon-console",
     "@storybook/addon-links/register",
     {
       name: "@storybook/addon-docs",
@@ -28,8 +30,20 @@ module.exports = {
       },
     },
   ],
-  webpackFinal: async (config) => {
+  webpackFinal: async (config, { configType }) => {
     // do mutation to the config
+    config.module.rules.push(
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+        include: path.resolve(__dirname, "../"),
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+        include: path.resolve(__dirname, "../"),
+      }
+    );
 
     return config;
   },

@@ -1,0 +1,15 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Text from "./Text";
+import addons, { mockChannel } from "@storybook/addons";
+
+addons.setChannel(mockChannel());
+
+<Meta title="Atoms" component={Text} />
+
+# Text
+
+<Preview>
+  <Story name="Text">
+    <Text>Lorem</Text>
+  </Story>
+</Preview>

@@ -11,7 +11,7 @@ setConsoleOptions({
 
 addParameters({
   viewport: {
-    viewports: newViewports, // newViewports would be an ViewportMap. (see below for examples)
+    //viewports: newViewports, // newViewports would be an ViewportMap. (see below for examples)
     defaultViewport: "someDefault",
   },
 });
