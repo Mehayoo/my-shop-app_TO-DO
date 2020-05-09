@@ -1,0 +1,17 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Link from "./Link";
+import addons, { mockChannel } from "@storybook/addons";
+
+addons.setChannel(mockChannel());
+
+<Meta title="Atoms" component={Link} />
+
+# Link
+
+<Preview>
+  <Story name="Link">
+    <Link href={"#!"} iconName={"person"} iconPos={"left"}>
+        {"Login"}
+    </Link>
+  </Story>
+</Preview>

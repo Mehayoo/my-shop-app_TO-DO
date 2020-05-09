@@ -12,10 +12,10 @@ const Image = ({
 }) => {
   const attributes = {
     "data-testid": "ms-image",
-    src: src,
-    alt: alt,
+    src,
+    alt,
     className: classnames("ms-image", classes),
-    style: style,
+    style,
     ...props,
   };
   return <img {...attributes} />;
