@@ -1,0 +1,18 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Image from "./Image";
+import addons, { mockChannel } from "@storybook/addons";
+
+addons.setChannel(mockChannel());
+
+<Meta title="Atoms" component={Image} />
+
+# Image
+
+<Preview>
+  <Story name="Image">
+    <Image
+      src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      alt="Image"
+    />
+  </Story>
+</Preview>

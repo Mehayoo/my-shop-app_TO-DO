@@ -1,0 +1,26 @@
+@import "../../../styles/colors";
+
+.ms-footer {
+  font-size: 1.5rem;
+  //margin: 0 auto;
+  //padding-right: 1.5rem;
+  //padding-left: 1.5rem;
+  //max-width: 128rem;
+  width: 100%;
+  background-color: map-get($map: $colors, $key: dark);
+
+  &__newsletter {
+    text-align: center;
+    font-family: inherit;
+    font-weight: 500;
+    margin: 0 auto;
+  }
+  &__socialMedia {
+    //background-color: green;
+  }
+  &__copyright {
+    background-color: map-get($map: $colors, $key: black);
+    text-align: center;
+    padding: 2rem 2rem 5rem;
+  }
+}

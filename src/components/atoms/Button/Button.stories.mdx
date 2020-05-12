@@ -1,0 +1,21 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Button from "./Button";
+import addons, { mockChannel } from "@storybook/addons";
+
+addons.setChannel(mockChannel());
+
+<Meta title="Atoms" component={Button} />
+
+# Button
+
+<Preview>
+  <Story name="Button">
+    <Button
+      as="button"
+      classes="red waves-effect waves-light btn-large"
+      iconPos="right"
+      iconName="card_giftcard"
+      name="Checkout"
+    />
+  </Story>
+</Preview>

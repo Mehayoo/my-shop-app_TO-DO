@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5% !important;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.ms-app {
+  //margin-top: 6.4rem;
+  // position: relative;
+  // max-width: px;
+  // margin: 0 auto;
+}
