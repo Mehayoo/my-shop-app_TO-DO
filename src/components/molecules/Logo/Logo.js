@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "../../atoms/Link/Link";
-import Image from "../../atoms/Image/Image";
+import { Image, Link } from "../../index";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import "./Logo.scss";

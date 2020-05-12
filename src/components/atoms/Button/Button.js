@@ -29,7 +29,7 @@ const Button = ({
 };
 
 Button.propTypes = {
-  as: PropTypes.string,
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
   classes: PropTypes.string,
   iconPos: PropTypes.string,
   iconName: PropTypes.string,
