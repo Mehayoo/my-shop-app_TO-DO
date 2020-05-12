@@ -1,59 +1,41 @@
-import React, { useContext, useEffect } from "react";
-import AssetsContext from "../../../context/assets/assetsContext";
-import Logo from "../Logo/Logo";
-import Link from "../../atoms/Link/Link";
-import Preloader from "../../atoms/Preloader/Preloader";
+import React from "react";
+import { Link, Icon, Logo, MiniBasket } from "../../index";
+import { OverlayTrigger, Popover } from "react-bootstrap";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import "./Navbar.scss";
 
-const Navbar = ({ classes = "" }) => {
-  const assetsContext = useContext(AssetsContext);
-  const { icons, getIcons, images, getImages, loading } = assetsContext;
+const Navbar = ({ classes = "", ...props }) => {
+  const { icons, images } = props;
 
-  useEffect(() => {
-    getImages();
-    getIcons();
-    // eslint-disable-next-line
-  }, []);
-
-  //"../../../../public/assets/default-monochrome-black.svg"
-
-  if (loading || images === null || icons === null) {
-    return <Preloader />;
-  }
+  console.log("icons in NAVBAR: ", icons);
+  console.log("images in NAVBAR: ", images);
 
   return (
     <nav className={classnames("ms-navbar", classes)}>
-      {icons.length && images.length && !loading ? (
-        <div className="ms-navbar__container">
-          <div className="ms-navbar__container-logo">
-            <Logo
-              src={images[0].imageSrc}
-              alt={images[0].imageAlt}
-              style={{ height: "70%" }}
-            />
-          </div>
-          <div className="ms-navbar__container-nav">
-            <ul className="nav__list">
-              {icons.map((icon) => (
-                <li key={icon.id} className="nav__item">
-                  <Link
-                    href={"#!"}
-                    iconName={icon.iconName}
-                    iconPos={"left"}
-                    className="nav__link"
-                  >
-                    {icon.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div className="ms-navbar__container">
+        <div className="ms-navbar__container-logo">
+          <Logo
+            src={images[0].imageSrc}
+            alt={images[0].imageAlt}
+            style={{ height: "70%" }}
+          />
         </div>
-      ) : (
-        <Preloader />
-      )}
+        <div className="ms-navbar__container-nav">
+          <ul className="nav__list">
+            <li className="nav__item">
+              <Link href={"#!"} className="nav__link">
+                <Icon iconName={"person"} iconPos={"left"}>
+                  {"Login"}
+                </Icon>
+              </Link>
+            </li>
+            <li className="nav__item">
+              <MiniBasket />
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   );
 };
