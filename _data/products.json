@@ -1,0 +1,195 @@
+[
+  {
+    "productId": "1_Nokia_105",
+    "productName": "Product 1",
+    "price": 3000,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/1_Nokia_105.jpg"
+  },
+  {
+    "productId": "2_iPhone_11_Pro_verde",
+    "productName": "Product 2",
+    "price": 2500,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/2_iPhone_11_Pro_verde.jpg"
+  },
+  {
+    "productId": "3_iPhone_11_Pro_negru",
+    "productName": "Product 3",
+    "price": 2500,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/3_iPhone_11_Pro_negru.jpg"
+  },
+  {
+    "productId": "4_iPhone_11_Pro_auriu",
+    "productName": "Product 4",
+    "price": 2500,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/4_iPhone_11_Pro_auriu.jpg"
+  },
+  {
+    "productId": "5_iPhone_11_Pro_argintiu",
+    "productName": "Product 5",
+    "price": 2500,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/5_iPhone_11_Pro_argintiu.jpg"
+  },
+  {
+    "productId": "6_iPhone_11_negru",
+    "productName": "Product 6",
+    "price": 2800,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/6_iPhone_11_negru.jpg"
+  },
+  {
+    "productId": "7_iPhone_11_rosu",
+    "productName": "Product 7",
+    "price": 2800,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/7_iPhone_11_rosu.jpg"
+  },
+  {
+    "productId": "8_iPhone_11_verde",
+    "productName": "Product 8",
+    "price": 2800,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/8_iPhone_11_verde.jpg"
+  },
+  {
+    "productId": "9_iPhone_11_galben",
+    "productName": "Product 9",
+    "price": 2800,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/9_iPhone_11_galben.jpg"
+  },
+  {
+    "productId": "10_iPhone_11_mov",
+    "productName": "Product 10",
+    "price": 2800,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/10_iPhone_11_mov.jpg"
+  },
+  {
+    "productId": "11_iPhone_11_alb",
+    "productName": "Product 11",
+    "price": 2800,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/11_iPhone_11_alb.jpg"
+  },
+  {
+    "productId": "12_iPhone_XS_gri",
+    "productName": "Product 12",
+    "price": 2900,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/12_iPhone_XS_gri.jpg"
+  },
+  {
+    "productId": "13_iPhone_XS_auriu",
+    "productName": "Product 13",
+    "price": 2900,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/13_iPhone_XS_auriu.jpg"
+  },
+  {
+    "productId": "14_iPhone_XS_argintiu",
+    "productName": "Product 14",
+    "price": 2900,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/14_iPhone_XS_argintiu.jpg"
+  },
+  {
+    "productId": "15_iPhone_XR_negru",
+    "productName": "Product 15",
+    "price": 2200,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/15_iPhone_XR_negru.jpg"
+  },
+  {
+    "productId": "16_iPhone_XR_albastru",
+    "productName": "Product 16",
+    "price": 2200,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/16_iPhone_XR_albastru.jpg"
+  },
+  {
+    "productId": "17_iPhone_XR_rosu",
+    "productName": "Product 17",
+    "price": 2200,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/17_iPhone_XR_rosu.jpg"
+  },
+  {
+    "productId": "18_iPhone_XR_coral",
+    "productName": "Product 18",
+    "price": 2200,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/18_iPhone_XR_coral.jpg"
+  },
+
+  {
+    "productId": "19_iPhone_XR_galben",
+    "productName": "Product 19",
+    "price": 2200,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/19_iPhone_XR_galben.jpg"
+  },
+  {
+    "productId": "20_iPhone_XR_alb",
+    "productName": "Product 20",
+    "price": 2200,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/20_iPhone_XR_alb.jpg"
+  },
+  {
+    "productId": "21_iPhone_8_Plus_gri",
+    "productName": "Product 21",
+    "price": 2000,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/21_iPhone_8_Plus_gri.jpg"
+  },
+  {
+    "productId": "22_iPhone_8_Plus_rosu",
+    "productName": "Product 21",
+    "price": 2000,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/22_iPhone_8_Plus_rosu.jpg"
+  },
+  {
+    "productId": "23_iPhone_8_Plus_auriu",
+    "productName": "Product 23",
+    "price": 2000,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/23_iPhone_8_Plus_auriu.jpg"
+  },
+  {
+    "productId": "24_iPhone_8_Plus_argintiu",
+    "productName": "Product 24",
+    "price": 2000,
+    "currency": "RON",
+    "productDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "image": "/products/24_iPhone_8_Plus_argintiu.jpg"
+  }
+]

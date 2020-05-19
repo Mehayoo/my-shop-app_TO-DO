@@ -1,0 +1,50 @@
+[
+  {
+    "assetType": "navIcon",
+    "assetName": "person",
+    "displayName": "Login",
+    "href": null,
+    "src": null,
+    "alt": null
+  },
+  {
+    "assetType": "navIcon",
+    "iconName": "shopping_cart",
+    "displayName": "Cart",
+    "href": null,
+    "src": null,
+    "alt": null
+  },
+  {
+    "assetType": "socialMediaIcon",
+    "assetName": null,
+    "displayName": null,
+    "href": "https://www.facebook.com/",
+    "src": "/socialMediaIcons/iconfinder_Circled_Facebook_svg_5279111.png",
+    "alt": "facebook"
+  },
+  {
+    "assetType": "socialMediaIcon",
+    "assetName": null,
+    "displayName": null,
+    "href": "https://www.instagram.com/",
+    "src": "/socialMediaIcons/iconfinder_Circled_Instagram_svg_5279112.png",
+    "alt": "instagram"
+  },
+  {
+    "assetType": "socialMediaIcon",
+    "assetName": null,
+    "displayName": null,
+    "href": "https://twitter.com/explore",
+    "src": "/socialMediaIcons/iconfinder_Circled_Twitter_svg_5279123.png",
+    "alt": "twitter"
+  },
+  {
+    "assetType": "socialMediaIcon",
+    "assetName": null,
+    "displayName": null,
+    "href": "https://www.youtube.com/",
+    "src": "/socialMediaIcons/iconfinder_Circled_Youtube_svg_5279120.png",
+    "alt": "youtube"
+  }
+]
