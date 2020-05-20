@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ProductsState from "./context/products/ProductsState";
 import AssetsState from "./context/assets/AssetsState";
+import CartState from "./context/cart/CartState";
 import { Header, Body, Footer, Button, Image } from "./components/index";
 import "./App.scss";
 
@@ -17,24 +18,18 @@ const App = () => {
   });
 
   return (
-    <ProductsState>
-      <AssetsState>
-        <div className="ms-app">
-          <Header />
-          <Body />
-          <Button
-            as="a"
-            classes="red waves-effect waves-light btn-large"
-            iconPos="right"
-            iconName="card_giftcard"
-            name="Checkout"
-            func={() => onSubmit()}
-          />
-          <Image style={{ width: "30rem" }} height="30rem" />
-        </div>
-        <Footer />
-      </AssetsState>
-    </ProductsState>
+    <CartState>
+      <ProductsState>
+        <AssetsState>
+          <div className="ms-app">
+            <Header />
+            <Body />
+            <Image style={{ width: "30rem" }} height="30rem" />
+          </div>
+          <Footer />
+        </AssetsState>
+      </ProductsState>
+    </CartState>
   );
 };
 
