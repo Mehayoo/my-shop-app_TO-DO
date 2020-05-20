@@ -5,6 +5,8 @@ const morgan = require("morgan");
 const colors = require("colors");
 const connectDB = require("./config/db");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const session = require("express-session");
 
 //Load env vars
 dotenv.config({ path: "./config/config.env" });
@@ -15,12 +17,33 @@ connectDB();
 //Route files
 const assets = require("./routes/assets");
 const products = require("./routes/products");
+const cart = require("./routes/cart");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    preflightContinue: true,
+    credentials: true,
+    origin: "http://localhost:8080",
+  })
+);
+
+app.use(cookieParser());
+app.use(
+  session({
+    secret: "secret",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 //Body parser
 app.use(express.json());
+
+app.use(function (req, res, next) {
+  res.locals.session = req.session;
+  next();
+});
 
 //Dev logging middleware - only want this to run if we're in development mode
 if (process.env.NODE_ENV === "development") {
@@ -33,6 +56,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //Mount routers
 app.use("/api/v1/assets", assets);
 app.use("/api/v1/products", products);
+app.use("/api/v1/cart", cart);
 
 const PORT = process.env.PORT || 5000;
 
