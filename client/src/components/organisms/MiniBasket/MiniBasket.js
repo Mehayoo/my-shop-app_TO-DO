@@ -1,30 +1,56 @@
-import React from "react";
-import { Link, Icon } from "../../index";
-import { OverlayTrigger, Popover } from "react-bootstrap";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import CartContext from "../../../context/cart/cartContext";
+import { MiniBasketButton, MiniCart } from "../../index";
+import { Overlay, Popover } from "react-bootstrap";
+import PropTypes from "prop-types";
 import "./MiniBasket.scss";
 
 const MiniBasket = () => {
+  const cartContext = useContext(CartContext);
+  const { loading, cart, getCart } = cartContext;
+
+  useEffect(() => {
+    getCart();
+    // eslint-disable-next-line
+  }, []);
+
+  console.log("CART IN MINIBASKET: ", cart);
+
+  const [show, setShow] = useState(false);
+  const [target, setTarget] = useState(null);
+  const ref = useRef(null);
+
+  const handleClick = (event) => {
+    setShow(!show);
+    setTarget(event.target);
+  };
+
   return (
-    <OverlayTrigger
-      className="ms-minibasket"
-      trigger="click"
-      placement={"bottom"}
-      overlay={
-        <Popover id={`popover-positioned-${"bottom"}`}>
-          <Popover.Title as="h3">{`Popover ${"bottom"}`}</Popover.Title>
-          <Popover.Content>
-            <strong>Holy guacamole!</strong> Check this info.
+    <div className="ms-minibasket">
+      <MiniBasketButton
+        toggleOverlay={handleClick}
+        quantity={cart.totalItems}
+      />
+      <Overlay
+        show={show}
+        target={target}
+        placement="bottom"
+        container={ref.current}
+        containerPadding={20}
+      >
+        <Popover id="MiniBasketPopover" className="mini-basket__popover">
+          <Popover.Content className="popover__content">
+            <MiniCart cart={cart} loading={loading} />
           </Popover.Content>
         </Popover>
-      }
-    >
-      <Link href={"#!"} className="nav__link">
-        <Icon iconName={"shopping_cart"} iconPos={"left"}>
-          {"Cart"}
-        </Icon>
-      </Link>
-    </OverlayTrigger>
+      </Overlay>
+    </div>
   );
+};
+
+MiniBasket.propTypes = {
+  cart: PropTypes.object,
+  loading: PropTypes.bool,
 };
 
 export default MiniBasket;

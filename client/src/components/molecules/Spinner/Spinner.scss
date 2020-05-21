@@ -2,4 +2,13 @@
   width: 20rem;
   margin: auto;
   display: block;
+
+  &__cartContent {
+    display: flex;
+    justify-content: center;
+
+    .ms-image {
+      height: 8rem;
+    }
+  }
 }

@@ -1,0 +1,29 @@
+.ms-cartContent {
+  &__title {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  &__scroll-bar {
+    max-height: 24rem;
+  }
+
+  &__actions {
+    float: right;
+  }
+
+  .scrollarea .scrollbar-container.vertical {
+    background: #d0d0d0;
+    opacity: 1;
+    width: 0.6rem;
+    border-radius: 0.3rem;
+    right: 0px;
+
+    .scrollbar {
+      background: #7c7a7a;
+      opacity: 1;
+      width: 0.5rem;
+      border-radius: 0.3rem;
+    }
+  }
+}

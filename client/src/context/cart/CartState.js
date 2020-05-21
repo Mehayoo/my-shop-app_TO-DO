@@ -7,7 +7,7 @@ import { SET_LOADING, GET_CART, ADD_PRODUCT } from "../types";
 
 const CartState = (props) => {
   const initialState = {
-    cart: null,
+    cart: {},
     loading: false,
   };
 

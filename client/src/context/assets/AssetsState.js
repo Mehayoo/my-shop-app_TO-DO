@@ -18,8 +18,6 @@ const AssetsState = (props) => {
 
     const res = await axios.get("http://localhost:5000/api/v1/assets");
 
-    console.log("res icons: ", res);
-
     dispatch({ type: GET_ASSETS, payload: res.data });
   };
 

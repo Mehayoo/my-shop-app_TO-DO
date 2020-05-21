@@ -1,15 +1,10 @@
 import React from "react";
 import { Link, Icon, Logo, MiniBasket } from "../../index";
-import { OverlayTrigger, Popover } from "react-bootstrap";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import "./Navbar.scss";
 
 const Navbar = ({ classes = "", ...props }) => {
-  // const { icons } = props;
-
-  // console.log("icons in NAVBAR: ", icons);
-
   return (
     <nav className={classnames("ms-navbar", classes)}>
       <div className="ms-navbar__container">

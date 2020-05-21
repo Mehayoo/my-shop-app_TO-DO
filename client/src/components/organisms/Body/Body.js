@@ -1,22 +1,20 @@
 import React, { useContext, useEffect } from "react";
 import ProductsContext from "../../../context/products/productsContext";
-import CartContext from "../../../context/cart/cartContext";
+//import CartContext from "../../../context/cart/cartContext";
 import { Product, Spinner } from "../../index";
 import "./Body.scss";
 
 const Body = () => {
   const productsContext = useContext(ProductsContext);
   const { loading, products, getProducts } = productsContext;
-  const cartContext = useContext(CartContext);
-  const { getCart } = cartContext;
+  // const cartContext = useContext(CartContext);
+  // const { getCart } = cartContext;
 
   useEffect(() => {
     getProducts();
-    getCart();
+    //getCart();
     // eslint-disable-next-line
   }, []);
-
-  console.log("products in BODY: ", products);
 
   return (
     <div className="ms-body">
