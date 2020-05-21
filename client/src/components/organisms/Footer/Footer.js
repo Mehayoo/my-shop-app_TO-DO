@@ -12,8 +12,6 @@ const Footer = () => {
     // eslint-disable-next-line
   }, []);
 
-  console.log("icons in FOOTER: ", assets);
-
   return (
     <footer className="ms-footer">
       {assets && Object.keys(assets).length && !loading ? (

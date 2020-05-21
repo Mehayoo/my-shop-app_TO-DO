@@ -81,7 +81,7 @@ exports.getCart = asyncHandler(async (req, res, next) => {
   if (!req.session.cart) {
     res.json({});
   } else {
-    var cart = new Cart(req.session.cart);
+    const cart = new Cart(req.session.cart);
     res.json(cart);
   }
 });
@@ -92,11 +92,34 @@ exports.getCart = asyncHandler(async (req, res, next) => {
 exports.addCartProducts = asyncHandler(async (req, res, next) => {
   const productId = req.params.id;
 
-  const cart = new Cart(req.session.cart ? req.session.cart : {});
+  const cart = new Cart(
+    req.session.cart && Object.keys(req.session.cart).length
+      ? req.session.cart
+      : {}
+  );
 
   const product = await Product.findById(productId);
 
   cart.add(product, productId);
+
+  req.session.cart = cart;
+
+  res.json(req.session.cart);
+});
+
+// @description     Delete products from cart
+// @route           GET /api/v1/cart/remove/:id
+// @access          Public
+exports.deleteCartProduct = asyncHandler(async (req, res, next) => {
+  const productId = req.params.id;
+
+  const cart = new Cart(
+    req.session.cart && Object.keys(req.session.cart).length
+      ? req.session.cart
+      : {}
+  );
+
+  cart.remove(productId);
 
   req.session.cart = cart;
 

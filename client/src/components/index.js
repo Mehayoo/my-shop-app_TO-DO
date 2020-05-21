@@ -6,7 +6,10 @@ export { default as Preloader } from "./atoms/Preloader/Preloader";
 export { default as Text } from "./atoms/Text/Text";
 
 export { default as Banner } from "./molecules/Banner/Banner";
+export { default as CartContent } from "./molecules/CartContent/CartContent";
 export { default as Logo } from "./molecules/Logo/Logo";
+export { default as MiniBasketButton } from "./molecules/MiniBasketButton/MiniBasketButton";
+export { default as MiniCart } from "./molecules/MiniCart/MiniCart";
 export { default as Navbar } from "./molecules/Navbar/Navbar";
 export { default as NewsletterForm } from "./molecules/NewsletterForm/NewsletterForm";
 export { default as Product } from "./molecules/Product/Product";

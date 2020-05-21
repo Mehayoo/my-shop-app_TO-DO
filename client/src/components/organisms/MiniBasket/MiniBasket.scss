@@ -1,6 +1,22 @@
-.ms-minibasket {
+@import "../../../styles/colors";
+
+#MiniBasketPopover {
+  background-color: map-get($colors, cyan-lighten-5);
+  width: 35rem !important;
+  top: 1rem !important;
+  box-sizing: border-box;
+  border: 0.5px solid black;
+  z-index: 100;
+
+  .popover__content {
+    padding: 1rem 1.4rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
 }
-#popover-positioned-bottom {
-  background-color: limegreen;
-  max-height: 35rem;
+
+.ms-minibasket {
+  width: 100%;
+  height: 100%;
 }

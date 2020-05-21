@@ -9,10 +9,6 @@ import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
 
 const App = () => {
-  const onSubmit = () => {
-    console.log("Submit");
-  };
-
   useEffect(() => {
     M.AutoInit();
   });
@@ -24,7 +20,6 @@ const App = () => {
           <div className="ms-app">
             <Header />
             <Body />
-            <Image style={{ width: "30rem" }} height="30rem" />
           </div>
           <Footer />
         </AssetsState>

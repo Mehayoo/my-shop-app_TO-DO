@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import CartContext from "../../../context/cart/cartContext";
-import { Image, Link, Button } from "../../index";
+import { Image, Button } from "../../index";
 import PropTypes from "prop-types";
 import "./Product.scss";
 
@@ -18,7 +18,7 @@ const Product = ({
   const { addProduct } = cartContext;
 
   return (
-    <div className="card">
+    <div className="ms-product card">
       <div className="card-image">
         <Image src={`http://localhost:5000${image}`} alt={productName} />
         <Button
@@ -30,6 +30,7 @@ const Product = ({
       <div className="card-content">
         <span className="card-title">{productName}</span>
         <p>{productDescription}</p>
+        <br />
         <p>
           <b>
             Price: {price} {currency}

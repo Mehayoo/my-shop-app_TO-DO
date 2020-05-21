@@ -5,8 +5,6 @@ import "./SocialMediaBar.scss";
 const SocialMediaBar = ({ ...props }) => {
   const { icons } = props;
 
-  console.log("icons in SOCIAL MEDIA BAR: ", icons);
-
   return (
     <>
       <Text as={"h4"} style={{ color: "white", textAlign: "center" }}>

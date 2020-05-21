@@ -40,6 +40,7 @@ const NewsletterForm = () => {
           as="a"
           classes="deep-orange darken-1 btn waves-effect waves-light"
           name="Submit"
+          func={() => {}}
         />
       </div>
     </div>

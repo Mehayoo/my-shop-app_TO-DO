@@ -1,6 +1,12 @@
 .ms-body {
+  margin-right: 4rem;
+  margin-left: 4rem;
+  margin-top: 3rem;
+
   &__productsList {
     &--item {
+      display: flex;
+      justify-content: center;
     }
   }
 }
