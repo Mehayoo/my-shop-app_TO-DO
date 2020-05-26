@@ -20,15 +20,15 @@ module.exports = function Cart(cart) {
   this.totalPrice = cart.totalPrice || 0;
 
   this.getItems = function () {
-    var arr = [];
-    for (var id in this.items) {
+    const arr = [];
+    for (let id in this.items) {
       arr.push(this.items[id]);
     }
     return arr;
   };
 
   this.add = function (item, id) {
-    var cartItem = this.items[id]; //The property names of an object can be strings or numbers. In case the property names are numbers, they must be accessed using the “bracket notation” like this
+    let cartItem = this.items[id]; //The property names of an object can be strings or numbers. In case the property names are numbers, they must be accessed using the “bracket notation” like this
     if (!cartItem || !Object.keys(cartItem).length) {
       cartItem = this.items[id] = { item: item, quantity: 0, price: 0 };
     }

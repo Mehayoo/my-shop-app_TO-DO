@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../../../context/cart/cartContext";
 import { Button, Image, Text, Spinner } from "../../index";
 import ScrollArea from "react-scrollbar";
 import PropTypes from "prop-types";
@@ -6,6 +7,9 @@ import "./CartContent.scss";
 
 const CartContent = ({ cart = {}, loading = null }) => {
   const { totalPrice, totalItems, items } = cart;
+
+  const cartContext = useContext(CartContext);
+  const { deleteCartProduct } = cartContext;
 
   return (
     <div className="ms-cartContent">
@@ -55,7 +59,9 @@ const CartContent = ({ cart = {}, loading = null }) => {
                         as="div"
                         classes="waves-effect btn-flat"
                         iconName="delete"
-                        func={() => {}}
+                        func={() => {
+                          deleteCartProduct(items[key].item._id);
+                        }}
                       />
                       <Button
                         as="div"

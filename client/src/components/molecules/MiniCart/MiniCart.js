@@ -4,9 +4,11 @@ import PropTypes from "prop-types";
 import "./MiniCart.scss";
 
 const MiniCart = ({ cart = {}, loading = null }) => {
+  const { items } = cart;
+
   return (
     <div className="ms-miniCart">
-      {!Object.keys(cart).length ? (
+      {!Object.keys(items).length ? (
         <div className="ms-miniCart__cartEmpty">
           <Text as={"h4"}>No products.</Text>
           <Text as={"h5"}>Cart is Empty.</Text>
