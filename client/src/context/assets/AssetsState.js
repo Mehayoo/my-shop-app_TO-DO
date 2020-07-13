@@ -16,7 +16,7 @@ const AssetsState = (props) => {
   const getAssets = async () => {
     setLoading();
 
-    const res = await axios.get("http://localhost:5000/api/v1/assets");
+    const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/assets`);
 
     dispatch({ type: GET_ASSETS, payload: res.data });
   };

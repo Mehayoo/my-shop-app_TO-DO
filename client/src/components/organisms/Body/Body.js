@@ -1,23 +1,21 @@
 import React, { useContext, useEffect } from "react";
 import ProductsContext from "../../../context/products/productsContext";
-//import CartContext from "../../../context/cart/cartContext";
 import { Product, Spinner } from "../../index";
 import "./Body.scss";
 
 const Body = () => {
   const productsContext = useContext(ProductsContext);
   const { loading, products, getProducts } = productsContext;
-  // const cartContext = useContext(CartContext);
-  // const { getCart } = cartContext;
 
   useEffect(() => {
     getProducts();
-    //getCart();
-    // eslint-disable-next-line
   }, []);
 
   return (
     <div className="ms-body">
+      <h5>
+        You are running this application in <b>{process.env.NODE_ENV}</b> mode.
+      </h5>
       {products && Object.keys(products).length && !loading ? (
         <ul className="ms-body__productsList row">
           {products.products.map((product) => (

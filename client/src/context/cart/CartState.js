@@ -24,7 +24,7 @@ const CartState = (props) => {
     const transport = axios.create({
       withCredentials: true,
     });
-    const res = await transport.get(`http://localhost:5000/api/v1/cart`);
+    const res = await transport.get(`${process.env.REACT_APP_BASE_URL}/cart`);
 
     dispatch({ type: GET_CART, payload: res.data });
   };
@@ -36,7 +36,7 @@ const CartState = (props) => {
       withCredentials: true,
     });
     const res = await transport.get(
-      `http://localhost:5000/api/v1/cart/add/${id}`
+      `${process.env.REACT_APP_BASE_URL}/cart/add/${id}`
     );
 
     console.log("RES.DATA: ", res.data);
@@ -51,7 +51,7 @@ const CartState = (props) => {
       withCredentials: true,
     });
     const res = await transport.get(
-      `http://localhost:5000/api/v1/cart/remove/${id}`
+      `${process.env.REACT_APP_BASE_URL}/cart/remove/${id}`
     );
 
     console.log("RES.DATA: ", res.data);

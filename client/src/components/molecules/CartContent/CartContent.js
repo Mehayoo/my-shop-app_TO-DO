@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
+import PropTypes from "prop-types";
+import ScrollArea from "react-scrollbar";
 import CartContext from "../../../context/cart/cartContext";
 import { Button, Image, Text, Spinner } from "../../index";
-import ScrollArea from "react-scrollbar";
-import PropTypes from "prop-types";
 import "./CartContent.scss";
 
 const CartContent = ({ cart = {}, loading = null }) => {

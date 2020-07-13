@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
+import PropTypes from "prop-types";
 import CartContext from "../../../context/cart/cartContext";
 import { Image, Button } from "../../index";
-import PropTypes from "prop-types";
 import "./Product.scss";
 
 const Product = ({

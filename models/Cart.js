@@ -21,9 +21,7 @@ module.exports = function Cart(cart) {
 
   this.getItems = function () {
     const arr = [];
-    for (let id in this.items) {
-      arr.push(this.items[id]);
-    }
+    this.items.forEach((id) => arr.push(this.items[id]));
     return arr;
   };
 
