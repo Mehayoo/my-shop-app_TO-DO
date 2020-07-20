@@ -1,7 +1,7 @@
 import React from "react";
-import { Image, Link } from "../../index";
-import classnames from "classnames";
 import PropTypes from "prop-types";
+import classnames from "classnames";
+import { Image, Link } from "../../index";
 import "./Logo.scss";
 
 const Logo = ({ classes = "", src = "", alt = "", style = {} }) => {

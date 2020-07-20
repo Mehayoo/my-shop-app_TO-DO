@@ -3,7 +3,12 @@ import axios from "axios";
 import cartContext from "./cartContext";
 import CartReducer from "./cartReducer";
 import regeneratorRuntime from "regenerator-runtime";
-import { SET_LOADING, GET_CART, ADD_PRODUCT } from "../types";
+import {
+  SET_LOADING,
+  GET_CART,
+  ADD_PRODUCT,
+  DELETE_CART_PRODUCT,
+} from "../types";
 
 const CartState = (props) => {
   const initialState = {
@@ -19,7 +24,7 @@ const CartState = (props) => {
     const transport = axios.create({
       withCredentials: true,
     });
-    const res = await transport.get(`http://localhost:5000/api/v1/cart`);
+    const res = await transport.get(`${process.env.REACT_APP_BASE_URL}/cart`);
 
     dispatch({ type: GET_CART, payload: res.data });
   };
@@ -31,7 +36,7 @@ const CartState = (props) => {
       withCredentials: true,
     });
     const res = await transport.get(
-      `http://localhost:5000/api/v1/cart/add/${id}`
+      `${process.env.REACT_APP_BASE_URL}/cart/add/${id}`
     );
 
     console.log("RES.DATA: ", res.data);
@@ -39,11 +44,32 @@ const CartState = (props) => {
     dispatch({ type: ADD_PRODUCT, payload: res.data });
   };
 
+  const deleteCartProduct = async (id) => {
+    setLoading();
+
+    const transport = axios.create({
+      withCredentials: true,
+    });
+    const res = await transport.get(
+      `${process.env.REACT_APP_BASE_URL}/cart/remove/${id}`
+    );
+
+    console.log("RES.DATA: ", res.data);
+
+    dispatch({ type: DELETE_CART_PRODUCT, payload: res.data });
+  };
+
   const setLoading = () => dispatch({ type: SET_LOADING });
 
   return (
     <cartContext.Provider
-      value={{ loading: state.loading, cart: state.cart, getCart, addProduct }}
+      value={{
+        loading: state.loading,
+        cart: state.cart,
+        getCart,
+        addProduct,
+        deleteCartProduct,
+      }}
     >
       {props.children}
     </cartContext.Provider>

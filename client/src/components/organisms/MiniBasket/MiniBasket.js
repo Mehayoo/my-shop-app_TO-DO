@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
+import { Overlay, Popover } from "react-bootstrap";
 import CartContext from "../../../context/cart/cartContext";
 import { MiniBasketButton, MiniCart } from "../../index";
-import { Overlay, Popover } from "react-bootstrap";
-import PropTypes from "prop-types";
 import "./MiniBasket.scss";
 
 const MiniBasket = () => {
