@@ -1,6 +1,7 @@
 import {
   GET_CART,
   ADD_PRODUCT,
+  SUBTRACT_PRODUCT,
   DELETE_CART_PRODUCT,
   SET_LOADING,
 } from "../types";
@@ -9,6 +10,7 @@ export default (state, action) => {
   switch (action.type) {
     case GET_CART:
     case ADD_PRODUCT:
+    case SUBTRACT_PRODUCT:
     case DELETE_CART_PRODUCT:
       return {
         ...state,
