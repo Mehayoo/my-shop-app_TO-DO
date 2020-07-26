@@ -7,6 +7,7 @@ import {
   SET_LOADING,
   GET_CART,
   ADD_PRODUCT,
+  SUBTRACT_PRODUCT,
   DELETE_CART_PRODUCT,
 } from "../types";
 
@@ -44,6 +45,21 @@ const CartState = (props) => {
     dispatch({ type: ADD_PRODUCT, payload: res.data });
   };
 
+  const subtractProduct = async (id) => {
+    setLoading();
+
+    const transport = axios.create({
+      withCredentials: true,
+    });
+    const res = await transport.get(
+      `${process.env.REACT_APP_BASE_URL}/cart/sub/${id}`
+    );
+
+    console.log("RES.DATA: ", res.data);
+
+    dispatch({ type: SUBTRACT_PRODUCT, payload: res.data });
+  };
+
   const deleteCartProduct = async (id) => {
     setLoading();
 
@@ -68,6 +84,7 @@ const CartState = (props) => {
         cart: state.cart,
         getCart,
         addProduct,
+        subtractProduct,
         deleteCartProduct,
       }}
     >

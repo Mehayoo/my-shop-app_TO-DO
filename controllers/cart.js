@@ -107,6 +107,25 @@ exports.addCartProducts = asyncHandler(async (req, res, next) => {
   res.json(req.session.cart);
 });
 
+// @description     Subtract product from cart
+// @route           GET /api/v1/cart/sub/:id
+// @access          Public
+exports.subtractCartProduct = asyncHandler(async (req, res, next) => {
+  const productId = req.params.id;
+
+  const cart = new Cart(
+    req.session.cart && Object.keys(req.session.cart).length
+      ? req.session.cart
+      : {}
+  );
+
+  cart.subtract(productId);
+
+  req.session.cart = cart;
+
+  res.json(req.session.cart);
+});
+
 // @description     Delete products from cart
 // @route           GET /api/v1/cart/remove/:id
 // @access          Public

@@ -9,7 +9,7 @@ const CartContent = ({ cart = {}, loading = null }) => {
   const { totalPrice, totalItems, items } = cart;
 
   const cartContext = useContext(CartContext);
-  const { deleteCartProduct } = cartContext;
+  const { addProduct, subtractProduct, deleteCartProduct } = cartContext;
 
   return (
     <div className="ms-cartContent">
@@ -53,7 +53,7 @@ const CartContent = ({ cart = {}, loading = null }) => {
                         as="div"
                         classes="waves-effect btn-flat"
                         iconName="remove"
-                        func={() => {}}
+                        func={() => subtractProduct(items[key].item._id)}
                       />
                       <Button
                         as="div"
@@ -67,7 +67,7 @@ const CartContent = ({ cart = {}, loading = null }) => {
                         as="div"
                         classes="waves-effect btn-flat"
                         iconName="add"
-                        func={() => {}}
+                        func={() => addProduct(items[key].item._id)}
                       />
                     </div>
                   </li>
