@@ -3,30 +3,45 @@
 
 Simple shop for ordering products.
 
-### Scope of project:
+
+## Instructions:
+- ./package.json -> npm run dev
+- ./config/config.env: 
+  - NODE_ENV=development
+  - PORT=5000
+  - MONGO_URI = mongodb+srv://sorin:sorin@mehayoo-lykqh.mongodb.net/myShopApp?retryWrites=true&w=majority
+- ./client/.env:
+  - REACT_APP_BASE_URL=http://localhost:5000/api/v1
+- MongoDB Compass:
+  - mongodb://sorin:sorin@contactkeeper-shard-00-00-mpj0k.mongodb.net:27017,contactkeeper-shard-00-01-mpj0k.mongodb.net:27017,contactkeeper-shard-00-02-mpj0k.mongodb.net:27017/test?authSource=admin&replicaSet=ContactKeeper-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true (ContactKeeper)
+  - mongodb+srv://sorin:sorin@mehayoo-lykqh.mongodb.net/admin?authSource=admin&replicaSet=Mehayoo-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true (MyShopApp)
+  - user:password - sorin:sorin 
+
+
+## Scope of project:
 
 Create a webapp that demonstrates the skills of a developer working on a React Project.
+
 
 ## Sections:
 
 - Header
-    - Logo
-    - Navigation Menu with link towards Checkout
+  - Logo
+  - Navigation Menu with link towards Checkout
 
 - Footer
-    - 3 Social Media Links
-    - Copyright text
+  - 3 Social Media Links
+  - Copyright text
 
 - Homepage->Product Page
 
-
 - Products
-	- Image
-	- Title
-	- Description
-	- Price
-	- Quantity Selector
-	- Add button
+  - Image
+  - Title
+  - Description
+  - Price
+  - Quantity Selector
+  - Add button
   - Filtering - MVP#2
 
 - Checkout page
@@ -41,7 +56,8 @@ Create a webapp that demonstrates the skills of a developer working on a React P
   - Heading
   - Body text
 
-## Components
+
+## Components:
 
 ### Atoms
 - Image
@@ -51,7 +67,6 @@ Create a webapp that demonstrates the skills of a developer working on a React P
 - Link
 - Quantity Selector
   
-
 ### Blocks
 - Navigation Menu
 - Header
@@ -62,7 +77,7 @@ Create a webapp that demonstrates the skills of a developer working on a React P
 - Filter  - MVP#2
 
 
-### Epics: (to be written 24.04.2020)
+## Epics: (to be written 24.04.2020)
 
 - Header
 - Footer
@@ -70,10 +85,9 @@ Create a webapp that demonstrates the skills of a developer working on a React P
 - Products
 - Checkout
 - Confirmation
-  
 
-### Technologies/Plugins
 
+## Technologies/Plugins:
 - ContextAPI
 - React Router
 - Reactbootstrap / MaterializeCSS - TBD (24.04.2020)
