@@ -29,7 +29,8 @@ const products = JSON.parse(
 //Import into DB
 const importData = async () => {
   try {
-    await Asset.create(assets); //the goal is to import it to the db so that's why we're not doing const something = await because we don't need to respond with anything
+    await Asset.create(assets); //the goal is to import it to the db so that's why 
+    // we're not doing const something = await because we don't need to respond with anything
     await Product.create(products);
     console.log("Data Imported...".green.inverse);
     process.exit();
